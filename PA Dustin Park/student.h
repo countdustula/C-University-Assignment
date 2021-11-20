@@ -1,9 +1,35 @@
 #pragma once
+#include<iostream>
+#include<array>
+using namespace std;
 
-const string studentData[] =
-{"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
-"A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
-"A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
-"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY"
-"A5,Dustin,Park,rockandroll868@gmail.com,20,5,6,10,SOFTWARE"
-}
+
+class Student {
+public:
+	Student();
+	void SetStudentID(int EnteredID);
+	void SetFName(string StudentFName);
+	void SetLName(string StudentLName);
+	void SetEmail(string StudentEmail);
+	void SetAge(int StudentAge);
+	void SetArrayNumDays(int x, int y, int z);
+	void SetDegreeProgram(string StudentProgram);
+	int GetStudentID() const;
+	string GetFname() const;
+	string GetLname() const;
+	string GetEmail() const;
+	int GetAge() const;
+	int GetArrayNumDays(int x) const;
+	string GetDegreeProgram() const;
+	string print();
+
+private: 
+	int StudentID;
+	string FirstName;
+	string LastName;
+	string EmailAddress;
+	int Age;
+	int ArrayNumDays[3];
+	string DegreeProgram;
+
+};
