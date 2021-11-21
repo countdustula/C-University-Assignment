@@ -12,6 +12,8 @@ Student::Student() {
 	DegreeProgram = "No degree program entered.";
 }
 
+Student::~Student() {};
+
 void Student::SetStudentID(int EnteredID) {
 	StudentID = EnteredID;
 }
