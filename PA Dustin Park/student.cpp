@@ -1,7 +1,8 @@
 #include"student.h"
 
+
 Student::Student() {
-	StudentID = 0;
+	StudentID = "No ID.";
 	FirstName = "No name entered.";
 	LastName = "No name entered.";
 	EmailAddress = "No Email entered.";
@@ -9,24 +10,24 @@ Student::Student() {
 	ArrayNumDays[0] = 0;
 	ArrayNumDays[1] = 0;
 	ArrayNumDays[2] = 0;
-	DegreeProgram = "No degree program entered.";
+	DegreeProgram = DegreeType::SOFTWARE;
 }
 
-Student::~Student() {};
 
-void Student::SetStudentID(int EnteredID) {
+
+void Student::SetStudentID(std::string EnteredID) {
 	StudentID = EnteredID;
 }
 
-void Student::SetFName(string StudentFName) {
+void Student::SetFName(std::string StudentFName) {
 	FirstName = StudentFName;
 }
 
-void Student::SetLName(string StudentLName) {
+void Student::SetLName(std::string StudentLName) {
 	LastName = StudentLName;
 }
 
-void Student::SetEmail(string StudentEmail) {
+void Student::SetEmail(std::string StudentEmail) {
 	EmailAddress = StudentEmail;
 }
 
@@ -39,23 +40,23 @@ void Student::SetArrayNumDays(int x, int y, int z) {
 	ArrayNumDays[1] = y;
 	ArrayNumDays[2] = z;
 }
-void Student::SetDegreeProgram(string StudentProgram) {
-	DegreeProgram = StudentProgram;
+void Student::SetDegreeProgram(DegreeType DT) {
+	this->DegreeProgram = DT;
 }
 
-int Student::GetStudentID() const {
+std::string Student::GetStudentID() const {
 	return StudentID;
 }
 
-string Student::GetFname() const {
+std::string Student::GetFname() const {
 	return FirstName;
 }
 
-string Student::GetLname() const {
+std::string Student::GetLname() const {
 	return LastName;
 }
 
-string Student::GetEmail() const {
+std::string Student::GetEmail() const {
 	return EmailAddress;
 }
 
@@ -67,10 +68,20 @@ int Student::GetArrayNumDays(int x) const {
 	return ArrayNumDays[x];
 }
 
-string Student::GetDegreeProgram() const {
-	return DegreeProgram;
+DegreeType Student::GetDegreeProgram() const {
+	return this->DegreeProgram;
 }
 
-string Student::print() {
-
+void Student::print() {
+	std::cout << this->GetStudentID() << '\t';
+	std::cout << this->GetFname() << '\t';
+	std::cout << this->GetLname() << '\t';
+	std::cout << this->GetEmail() << '\t';
+	std::cout << this->GetAge() << '\t';
+	std::cout << this->GetArrayNumDays(0) << '\t';
+	std::cout << this->GetArrayNumDays(1) << '\t';
+	std::cout << this->GetArrayNumDays(2) << '\t';
 }
+
+
+ 

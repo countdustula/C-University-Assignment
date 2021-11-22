@@ -1,20 +1,17 @@
 #pragma once
-#include "Student.h"
-#include "degree.h"
-#include<iostream>
-using namespace std;
+#include "student.h"
+#ifndef roster_h
+#define roster_h
+
+
+
+
 
 class Roster {
 public:
+	int i = -1;
 	Student* classRosterArray[5];
-	void parse(string data);
-	void add(string StudentID,
-			 string StudentFName,
-			 string StudentLName,
-			 string StudentEmail,
-			 int     StudentAge,
-			 int     Day1,
-	         int     Day2,
-		     int     Day3,
-			 DegreeType StudentDegreeType);
+	void parse(std::string data);
 };
+
+#endif

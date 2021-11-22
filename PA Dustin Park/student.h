@@ -1,34 +1,39 @@
-#pragma once
-#include<iostream>
-using namespace std;
+#ifndef student_h
+#define student_h
 
+#pragma once
+#include"degree.h"
+#include<iostream>
 
 class Student {
 public:
 	Student();
-	void SetStudentID(int EnteredID);
-	void SetFName(string StudentFName);
-	void SetLName(string StudentLName);
-	void SetEmail(string StudentEmail);
+	void SetStudentID(std::string EnteredID);
+	void SetFName(std::string StudentFName);
+	void SetLName(std::string StudentLName);
+	void SetEmail(std::string StudentEmail);
 	void SetAge(int StudentAge);
 	void SetArrayNumDays(int x, int y, int z);
-	void SetDegreeProgram(string StudentProgram);
-	int GetStudentID() const;
-	string GetFname() const;
-	string GetLname() const;
-	string GetEmail() const;
+	void SetDegreeProgram(DegreeType DT);
+	std::string GetStudentID() const;
+	std::string GetFname() const;
+	std::string GetLname() const;
+	std::string GetEmail() const;
 	int GetAge() const;
 	int GetArrayNumDays(int x) const;
-	string GetDegreeProgram() const;
-	string print();
+	DegreeType GetDegreeProgram() const;
+	void print();
 
 private: 
-	int StudentID;
-	string FirstName;
-	string LastName;
-	string EmailAddress;
+	std::string StudentID;
+	std::string FirstName;
+	std::string LastName;
+	std::string EmailAddress;
 	int Age;
 	int ArrayNumDays[3];
-	string DegreeProgram;
+	DegreeType DegreeProgram;
 
 };
+
+
+#endif
