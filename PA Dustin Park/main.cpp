@@ -1,11 +1,17 @@
 #include <iostream>
-#include "student.h"
+#include "roster.h"
 using namespace std;
 
 int main() {
 	
-	Student x;
+	cout << "C867-Scripting & Programming: Applications" << endl;
+	cout << "Language: C++" << endl;
+	cout << "Student ID: 007535477" << endl;
+	cout << "Name: Dustin Park" << endl << endl;
 
+
+	cout << "Displaying all students:" << endl;
+	Roster r;
 
 	string studentData[] = {
 	"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
@@ -15,12 +21,9 @@ int main() {
 	"A5,Dustin,Park,rockandroll868@gmail.com,20,3,4,5,SOFTWARE",
 	};
 
-	cout << "C867-Scripting & Programming: Applications" << endl;
-	cout << "Language: C++" << endl;
-	cout << "Student ID: 007535477" << endl;
-	cout << "Name: Dustin Park" << endl << endl;
+	for (int i = 0; i < 5; i++) r.parse(studentData[i]);
 
-	cout << "Displaying all students:" << endl;
+	r.printAll();
 
-	x.print();
+
 }

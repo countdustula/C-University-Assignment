@@ -1,13 +1,16 @@
 #ifndef student_h
 #define student_h
-
 #pragma once
+#include <iostream>
+#include <iomanip>
+#include <stdio.h>
 #include"degree.h"
-#include<iostream>
+
 
 class Student {
 public:
 	Student();
+	Student(std::string StudentID, std::string FirstName, std::string LastName, std::string EmailAddress, int age, int ArrayNumDays[], DegreeType DegreeProgram);
 	void SetStudentID(std::string EnteredID);
 	void SetFName(std::string StudentFName);
 	void SetLName(std::string StudentLName);

@@ -1,16 +1,29 @@
 #include"student.h"
 
-
 Student::Student() {
-	StudentID = "No ID.";
-	FirstName = "No name entered.";
-	LastName = "No name entered.";
-	EmailAddress = "No Email entered.";
-	Age = 0;
-	ArrayNumDays[0] = 0;
-	ArrayNumDays[1] = 0;
-	ArrayNumDays[2] = 0;
-	DegreeProgram = DegreeType::SOFTWARE;
+	this->StudentID = "No ID.";
+	this->FirstName = "No name entered.";
+	this->LastName = "No name entered.";
+	this->EmailAddress = "No Email entered.";
+	this->Age = 0;
+	this->ArrayNumDays[0] = 0;
+	this->ArrayNumDays[1] = 0;
+	this->ArrayNumDays[2] = 0;
+	this->DegreeProgram = DegreeType::SOFTWARE;
+}
+
+Student::Student(std::string StudentID, std::string FirstName, std::string LastName, std::string EmailAddress, int age, int ArrayNumDays[], DegreeType DegreeProgram) {
+	this->StudentID = StudentID;
+	this->FirstName = FirstName;
+	this->LastName = LastName;
+	this->EmailAddress = EmailAddress;
+	this->Age = age;
+	this->ArrayNumDays[0] = ArrayNumDays[0];
+	this->ArrayNumDays[1] = ArrayNumDays[1];
+	this->ArrayNumDays[2] = ArrayNumDays[2];
+	this->DegreeProgram = DegreeProgram;
+
+
 }
 
 
@@ -81,7 +94,10 @@ void Student::print() {
 	std::cout << this->GetArrayNumDays(0) << '\t';
 	std::cout << this->GetArrayNumDays(1) << '\t';
 	std::cout << this->GetArrayNumDays(2) << '\t';
+	std::cout << DegreeString[(int)GetDegreeProgram()] << std::endl;
 }
+
+
 
 
  
