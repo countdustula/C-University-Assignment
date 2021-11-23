@@ -89,11 +89,11 @@ void Student::print() {
 	std::cout << this->GetStudentID() << '\t';
 	std::cout << this->GetFname() << '\t';
 	std::cout << this->GetLname() << '\t';
-	std::cout << this->GetEmail() << '\t';
 	std::cout << this->GetAge() << '\t';
-	std::cout << this->GetArrayNumDays(0) << '\t';
-	std::cout << this->GetArrayNumDays(1) << '\t';
-	std::cout << this->GetArrayNumDays(2) << '\t';
+	std::cout << '\t';
+
+	std::cout << "{" << this->GetArrayNumDays(0) << ", " << this->GetArrayNumDays(1) << ", " << this->GetArrayNumDays(2) << "}" << '\t';
+
 	std::cout << DegreeString[(int)GetDegreeProgram()] << std::endl;
 }
 

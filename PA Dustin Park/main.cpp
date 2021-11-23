@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	
+
 	cout << "C867-Scripting & Programming: Applications" << endl;
 	cout << "Language: C++" << endl;
 	cout << "Student ID: 007535477" << endl;
@@ -21,9 +21,9 @@ int main() {
 	"A5,Dustin,Park,rockandroll868@gmail.com,20,3,4,5,SOFTWARE",
 	};
 
-	for (int i = 0; i < 5; i++) r.parse(studentData[i]);
+	for (int i = 0; i <= 4; ++i){
+	r.parse(studentData[i]);
+	}
 
 	r.printAll();
-
-
 }

@@ -2,6 +2,7 @@
 
 
 void Roster::parse(std::string data) {
+
 	size_t rhs = data.find(",");
 	std::string StudentID = data.substr(0, rhs);
 
@@ -34,16 +35,17 @@ void Roster::parse(std::string data) {
 	int day3 = std::stoi(data.substr(lhs, rhs - lhs));
 
 	lhs = rhs + 1;
+	rhs = data.find(",", lhs);
 
 	DegreeType StudentDegree = DegreeType::SOFTWARE;
 	 
 	if (data.at(lhs) == 'S' && data.at(lhs + 1) == 'E')
 		StudentDegree = DegreeType::SECURITY;
 
-	else if (data.at(lhs) == 'S' && data.at(lhs + 1) == 'S')
+	else if (data.at(lhs) == 'S' && data.at(lhs + 1) == 'O')
 		StudentDegree = DegreeType::SOFTWARE;
 
-	else if (data.at(lhs) == 'S')
+	else if (data.at(lhs) == 'N')
 		StudentDegree = DegreeType::NETWORK;
 
 	add(StudentID, Fname, Lname, StudentEmail, StudentAge, day1, day2, day3, StudentDegree);
@@ -56,7 +58,8 @@ void Roster::add(std::string ID, std::string Fname, std::string Lname, std::stri
 }
 
 void Roster::printAll() {
-	for (int i = 0; i <= 5; i++);
-	Roster::classRosterArray[i]->print();
+	for (int i = 0; i <=4; i++){
+		Roster::classRosterArray[i]->print();
+	}
 }
 
