@@ -1,6 +1,5 @@
 #include"roster.h"
 
-
 void Roster::parse(std::string data) {
 
 	size_t rhs = data.find(",");
@@ -61,5 +60,20 @@ void Roster::printAll() {
 	for (int i = 0; i <=4; i++){
 		Roster::classRosterArray[i]->print();
 	}
+}
+
+
+void Roster::printInvalidEmails() {
+	for (int i = 0; i <= 4; i++) {
+		classRosterArray[i]->GetEmail();
+		if (((classRosterArray[i]->GetEmail()).find("@") == false) or ((classRosterArray[i]->GetEmail()).find(".") == false) or (classRosterArray[i]->GetEmail().find(" ") == true )) {
+
+			std::cout << classRosterArray[i]->GetEmail() << std::endl;
+		}
+		
+
+	}
+
+
 }
 

@@ -26,4 +26,13 @@ int main() {
 	}
 
 	r.printAll();
+
+	cout << endl << "Displaying invalid emails:" << endl;
+
+	r.printInvalidEmails();
+	
+
+
+
+
 }

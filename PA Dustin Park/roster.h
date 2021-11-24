@@ -10,6 +10,7 @@ public:
 	void parse(std::string data);
 	void add(std::string ID, std::string Fname, std::string Lname, std::string Email, int Age, int day1, int day2, int day3, DegreeType DT);
 	void printAll();
+	void printInvalidEmails();
 };
 
 #endif
